@@ -1,6 +1,6 @@
 {
   "name": "artprima/query-filter-bundle",
-  "description": "An easy way to filter requests in your Symfony 4/5/6 application (that uses Doctrine2 as ORM).",
+  "description": "An easy way to filter requests in your Symfony 4/5/6/7 application (that uses Doctrine2 as ORM).",
   "keywords": [ "symfony", "doctrine", "query", "filter" ],
   "type": "symfony-bundle",
   "license": "MIT",
@@ -11,17 +11,18 @@
     }
   ],
   "require": {
-    "php": ">=8.0.0",
-    "symfony/http-kernel": "^4.4|^5.2|^6.0",
-    "symfony/dependency-injection": "^4.4|^5.2|^6.0",
-    "symfony/config": "^4.4|^5.2|^6.0",
-    "doctrine/orm": "^2.7",
+    "php": ">=8.1",
+    "symfony/http-kernel": "^4.4|^5.2|^6.0|^7.0",
+    "symfony/dependency-injection": "^4.4|^5.2|^6.0|^7.0",
+    "symfony/config": "^4.4|^5.2|^6.0|^7.0",
+    "doctrine/orm": "^2.7|^3.0",
     "doctrine/persistence": "^2.0|^3.0",
     "sensio/framework-extra-bundle": "^5.1.5|^6.0",
-    "doctrine/doctrine-bundle": "^2.2"
+    "doctrine/doctrine-bundle": "^2.2|^3.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^8.0|^9.0"
+    "phpunit/phpunit": "^9.0|^10.0",
+    "symfony/phpunit-bridge": "^6.0|^7.0"
   },
   "autoload": {
     "psr-4": {
@@ -32,6 +33,15 @@
     "psr-4": {
       "Tests\\Unit\\Artprima\\QueryFilterBundle\\": "tests/unit",
       "Tests\\Functional\\Artprima\\QueryFilterBundle\\": "tests/functional"
+    }
+  },
+  "conflict": {
+    "symfony/symfony": "*"
+  },
+  "extra": {
+    "symfony": {
+      "allow-contrib": false,
+      "require": "^6.4|^7.0"
     }
   }
 }
